@@ -10,3 +10,16 @@ Simple Chatserver using Java Sockets
 ## Classes
 **Server:** [Click here...](https://github.com/Cacaonut/chatserver/blob/master/src/Server.java)\
 **Client:** [Click here...](https://github.com/Cacaonut/chatserver/blob/master/src/Client.java)
+
+## Usage with other IDE than BlueJ
+To use this project in other IDEs than BlueJ you'll need a main method like seen in [Test.java](https://github.com/Cacaonut/chatserver/blob/master/src/Test.java).
+
+Following code may be used to instantiate a server on localhost:555 and a client and connect them:
+```
+new Thread(() -> {
+    new Server(555);
+}).start();
+
+Client client = new Client();
+client.startConnection("127.0.0.1", 555);
+```
